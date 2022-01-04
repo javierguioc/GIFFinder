@@ -18,6 +18,7 @@ export default function Register() {
   }
 
   if (registered) {
+    // eslint-disable-next-line jsx-a11y/accessible-emoji
     return <h4>
       Congratulations ✅! You've been successfully registered!
     </h4>
