@@ -1,7 +1,6 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
 
-import React from "react";
 import SearchForm from "components/SearchForm";
 import { Helmet } from "react-helmet";
 import Button from 'components/Button'
