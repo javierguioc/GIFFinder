@@ -2,8 +2,11 @@ import React from 'react';
 import { render, waitForElement, fireEvent, screen } from '@testing-library/react';
 import App from '../App';
 
+import { ThemeProvider } from 'emotion-theming'
+import { theme } from 'styles'
+
 test('home work as expected', async () => {
-  const {container} = render(<App />)
+  const {container} = render(  <ThemeProvider theme={theme}><App /></ThemeProvider>)
   const gifLink = await waitForElement(
     () => container.querySelector('.Gif-link')
   )
@@ -12,7 +15,7 @@ test('home work as expected', async () => {
 })
 
 test('search form could be used', async () => {
-  render(<App />)
+  render(<ThemeProvider theme={theme}><App /></ThemeProvider>)
   const input = await screen.findByRole('textbox')
   const button = await screen.findByRole('button')
 

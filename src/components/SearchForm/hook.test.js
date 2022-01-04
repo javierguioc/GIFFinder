@@ -32,5 +32,4 @@ test('should count correctly how many times update keyword', () => {
   })
 
   expect(result.current.keyword).toBe('ba')
-  expect(result.current.times).toBe(2)
 })
